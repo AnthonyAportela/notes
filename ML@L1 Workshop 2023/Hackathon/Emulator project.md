@@ -3,7 +3,7 @@ The main goal of this hackathon project is to integrate a couple of neural netwo
 - Design an architecture in python
 - Implement compression (quantization and pruning)
 - Train the model
-- Convert into firmware (aka cpp and hls)
+- Convert into firmware (aka c++ and hls)
 
 After this there's a fork in the road. You have to go down both these paths in order for CMS to allow you to have you algorithm on L1.
 
@@ -16,8 +16,9 @@ The workflow from here is to make two main components:
 - The loader (aka emulator)
 - The produces
 
-The loader is this piece of code which translates in CMSSW inputs into something the models can understand, then converts the output of the model back into something CMSSW can understand.
+**The loader** is this piece of code which translates in CMSSW inputs into something the models can understand, then converts the output of the model back into something CMSSW can understand.
 
 > CMSSW inputs -->> model inputs -->> model -->> model outputs -->> CMSSW outputs
 
+**The producer** is a piece of code which emulates the stream of hardware inputs from CMSSW to be fed into the emulator. 
 
